@@ -1,0 +1,23 @@
+#F7F7F2; preenchimento: 20px; fonte-família: Arial, sans-serif; cor: preto; exibição: flex; alinhamento-itens: centro; justificar-conteúdo: espaço-entre; lacuna: 20px;">
+ <estilo> 
+ rodapé A { 
+ cor: preto; 
+ Decoração de texto: nenhuma; 
+   Transição: Cor   0.3s facilidade;  0.3s facilidade;  
+      }  
+
+  rodapé A:Hover {  
+  cor:  #098DAC; #098DAC; 
+      }  
+ <estilo> 
+  
+ <DIV estilo="Flex-Base: 30%;">  "Flex-Base: 30%;">  
+  https://raw.githubusercontent.com/beatrizdantasp/Projeto/main-1-1/img-20250515-WA0026.jpg" Alt="Logo BLV Social" Estilo="altura: auto; largura:  100 %; largura máxima: 120px;"> 1-1/IMG-20250515-WA0026.jpg" alt="Logo BLV Social" style="altura: auto; largura: 100%; largura máxima:   120PX;"> 
+ </div> 
+  
+ <estilo Div="Flex-Base: 70%; text-align: direito;">  
+     <p><strong>Email:</strong> <a href="mailto:mdtsocial@gmail.com">mdtsocial@gmail.com</a></a> 
+ <p>< forte>Telefone: forte> <a href="Tel:+5583991610237">(83) 99161-0237 
+ <p>< forte>Instagram: forte> <a href="https://www.instagram.com/ongblv?igsh=MXdxMnh1dGdyems4eg==" alvo="_em branco">blv 
+ </div> 
+<pé>
