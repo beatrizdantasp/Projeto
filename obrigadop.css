@@ -32,7 +32,7 @@ body {
   color: #f1f1f1;
 }
 
-.botao-insta {
+.botao-voltar {
   padding: 15px 40px;
   background-color: #ffffff;
   color: #098DAC;
@@ -43,7 +43,7 @@ body {
   transition: 0.3s ease;
 }
 
-.botao-insta:hover {
+.botao-voltar:hover {
   background-color: #04C260;
   color: white;
 }
