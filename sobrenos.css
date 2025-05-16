@@ -1,0 +1,97 @@
+.sobre-nos {
+    background-color: white ;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+  }
+  
+  .sobre-nos .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .sobre-nos h2 {
+    font-size: 36px;
+    color: white;
+    font-family:'Playfair Display', serif;
+
+ 
+  }
+  
+  .sobre-nos p {
+    font-size: 18px;
+    color: white; 
+    font-family: 'EB Garamond', serif;
+
+  }
+.sobre-nos h3 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+.sobre-nos {
+    background: linear-gradient(135deg, #EC7F18, #098DAC, #04c260);
+    background-size: 200% 200%;
+    animation: deslizar-degrade 15s ease infinite;
+    padding: 60px 20px;
+    color: white;
+  }
+  
+  @keyframes deslizar-degrade {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  
+  .nossa-meta h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .nossa-meta blockquote {
+    background: white;
+    padding: 20px;
+    font-size: 20px;
+    font-family:'Playfair Display', serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    color: #098DAC;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  
+  .nossa-meta blockquote::before {
+    content: "“";
+    font-size: 50px;
+    color: #EC7F18;
+    position: absolute;
+    left: 15px;
+    top: -10px;
+  }
+  
+  .nossa-meta .lema {
+    display: block;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #04C260;
+    font-size: 22px;
+  }
+  
+  @media (max-width: 600px) {
+    .sobre-nos h2 {
+      font-size: 28px;
+    }
+  
+    .sobre-nos p,
+    .nossa-meta blockquote {
+      font-size: 16px;
+      padding: 15px;
+    }
+  
+    .nossa-meta .lema {
+      font-size: 18px;
+    }
+  }
