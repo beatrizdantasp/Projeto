@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONG BLV - Boulevard Social</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display&family=EB+Garamond&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cor-primaria: #EC7F18;
+      --cor-secundaria: #098DAC;
+      --cor-destaque: #04C260;
+      --cor-fundo: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--cor-fundo);
+      color: #222;
+    }
+
+    header {
+      background: #f7f7f2;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--cor-secundaria);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--cor-destaque);
+    }
+
+    .banner {
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .banner p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .valores {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .valor {
+      flex: 1 1 250px;
+      background: var(--cor-primaria);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .valor h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    /* Sobre Nós */
+    #sobre-nos {
+      background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria), var(--cor-destaque));
+      background-size: 200% 200%;
+      animation: deslizar-degrade 15s ease infinite;
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+      font-family: 'Comic Neue', cursive;
+    }
+
+    @keyframes deslizar-degrade {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #sobre-nos .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #sobre-nos h2 {
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    #sobre-nos p {
+      font-size: 18px;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .nossa-meta {
+      margin-top: 40px;
+    }
+
+    .nossa-meta h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    blockquote {
+      background: white;
+      padding: 20px;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      color: var(--cor-secundaria);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+
+    blockquote::before {
+      content: "“";
+      font-size: 50px;
+      color: var(--cor-primaria);
+      position: absolute;
+      left: 15px;
+      top: -10px;
+    }
+
+    .lema {
+      display: block;
+      margin-top: 20px;
+      font-style: italic;
+      font-weight: bold;
+      color: var(--cor-destaque);
+      font-size: 22px;
+    }
+
+    /* Projetos */
+    #projetos {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    #projetos h2 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 60px;
+      color: white;
+      background-color: var(--cor-primaria);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .bloco {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #fefefe;
+      border: 2px solid var(--cor-secundaria);
+      margin-bottom: 50px;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .bloco img {
+      max-width: 300px;
+      border-radius: 20px;
+      flex: 1 1 300px;
+      object-fit: cover;
+    }
+
+    .bloco div {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bloco h3 {
+      color: var(--cor-secundaria);
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .bloco p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .bloco:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .botao {
+      display: inline-block;
+      background: var(--cor-primaria);
+      color: white;
+      padding: 18px 50px;
+      font-size: 1.5em;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .botao:hover {
+      background: var(--cor-destaque);
+    }
+
+    /* Parceiro */
+    #parceiro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background: linear-gradient(120deg, var(--cor-secundaria), var(--cor-primaria));
+      color: white;
+    }
+
+    #parceiro .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 50px;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #parceiro form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #parceiro input,
+    #parceiro textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+
+    #parceiro button {
+      background: var(--cor-destaque);
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    #parceiro button:hover {
+      background: var(--cor-primaria);
+    }
+
+    footer {
+      background: #F7F7F2;
+      padding: 30px 60px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer-links a,
+    .footer-contacts a {
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer-links a:hover,
+    .footer-contacts a:hover {
+      color: var(--cor-secundaria);
+    }
+
+    @media (max-width: 768px) {
+      .bloco {
+        flex-direction: column !important;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/main-1-1/IMG-20250515-WA0026.jpg" alt="Logo ONG BLV" />
+    </div>
+    <nav>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre-nos">Sobre Nós</a>
+      <a href="#parceiro">Seja Parceiro</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>ONG BLV - Boulevard Social</h1>
+    <p>Transformando vidas por meio da educação, cultura, esporte e solidariedade.</p>
+  </section>
+
+  <section class="valores">
+    <div class="valor">
+      <h3>Educação</h3>
+      <p>Capacitação e qualificação para o futuro.</p>
+    </div>
+    <div class="valor">
+      <h3>Esporte</h3>
+      <p>Transformação e inclusão através do esporte.</p>
+    </div>
+    <div class="valor">
+      <h3>Solidariedade</h3>
+      <p>Ajuda mútua e amor ao próximo como base da nossa ação.</p>
+    </div>
+  </section>
+
+  <section id="projetos">
+    
+     <h2>Conheça nossos projetos</h2>
+
+    <div class="bloco">
+    <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/mundo-azul.jpeg" alt="Projeto Meu Mundo Azul" />
+      <div>
+        <h3>Meu Mundo Azul</h3>
+        <p>Projeto voltado para crianças com TEA (Transtorno do espectro autista). Fornecendo atendimento gratuito com psicólogo, fisioterapeuta, enfermeiro, fonoaudiólogo, psicopedagogo, educador físico e social.</p>
+      </div>
+    </div>
+  <div class="bloco">
+   <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/alimentos.jpeg" alt="Projeto Doação de Alimentos" />
+      <div>
+        <h3>Doação de Alimentos</h3>
+        <p>Nosso projeto tem como objetivo combater a fome e promover a dignidade em comunidades em situação de vulnerabilidade. A iniciativa distribui cestas básicas e alimentos frescos para famílias carentes.</p>
+      </div>
+    </div>
+
+    <div class="bloco">
+       <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/cursos.jpeg" alt="Projeto Cursos"/>
+      <div>
+        <h3>Cursos Profissionalizantes</h3>
+        <p>Oferecemos cursos gratuitos para qualificação profissional em diversas áreas, como: Primeiros Socorros, Recursos Humanos, Operador de Caixa, Atendente de Farmácia, Cuidador de Idosos, Porteiro, Secretariado e Fiscal de Loja.</p>
+      </div>
+    </div>
+
+   <div class="bloco">
+   <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/esporte.jpeg" alt="Projeto Esportes" />
+      <div>
+        <h3>Esportes e Dança</h3>
+        <p>Acreditamos que o esporte é uma poderosa ferramenta de transformação social. Por isso, oferecemos aulas gratuitas de ballet, judô, futsal, vôlei, basquete, ginástica rítmica, jazz e entre muitos outros para crianças e jovens de comunidades carentes.</p>
+      </div>
+    </div>
+
+    <div class="bloco">
+    <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/feliz-idade.jpeg" alt="Projeto Feliz Idade" />
+      <div>
+        <h3>Feliz Idade</h3>
+        <p>O projeto Feliz Idade oferece apoio, passeios e hidroginástica para idosos, promovendo saúde, diversão e socialização. Uma iniciativa para viver a melhor idade com alegria e qualidade de vida!</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a href="#parceiro" class="botao">Quero ser um parceiro</a>
+    </div>
+  </section>
+
+  <section id="sobre-nos">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>Em 2009, Mailson Dantas e sua esposa iniciaram ações sociais com distribuição de alimentos. Hoje, a ONG BLV impacta mais de duas mil famílias com iniciativas voltadas ao acolhimento e transformação social.</p>
+      <div class="nossa-meta">
+        <h2>Nossa Meta</h2>
+        <blockquote>
+          Resgatar a dignidade das crianças, adolescentes, jovens e dos adultos,
+          promovendo a transformação através do esporte, cultura e lazer.
+          <span class="lema">“Abrindo caminhos para o futuro.”</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="parceiro">
+    <div class="container">
+      <h1>Seja nosso parceiro!</h1>
+      <p>Quer fazer parte dessa transformação? Preencha o formulário abaixo para se tornar um parceiro da ONG BLV.</p>
+      <form>
+        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telefone" placeholder="Telefone" required />
+        <textarea name="mensagem" placeholder="Sua mensagem" rows="4"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+ <footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/main-1-1/IMG-20250515-WA0026.jpg" alt="Logo BLV Social" style="height: 80px;" />
+    </div>
+
+    <div class="footer-links" style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="#projetos">Nossos Projetos</a>
+      <a href="#sobre-nos">Sobre Nós</a>
+      <a href="#parceiro">Seja um Parceiro</a>
+    </div>
+
+    <div class="footer-contacts">
+      <h4>Contato</h4>
+      <a href="mailto:mdtsocial@gmail.com">email: mdtsocial@gmail.com</a><br />
+      <a href="tel:+5583991610237">telefone: (83) 99161-0237</a><br />
+      <a href="https://www.instagram.com/ongblv" target="_blank">instagram: @ongblv</a>
+    </div>
+  </div>
+
+  <div style="text-align:center; padding-top: 20px; font-size: 14px; color: #555;">
+    <h5>&copy; 2025 ONG BLV - Todos os direitos reservados.</h5>
+    </div>
+  </footer>
+  
+</body>
+</html>
