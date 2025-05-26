@@ -307,7 +307,6 @@
         <a href="sobre-nos.html" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
         <div class="dropdown-content" aria-label="Submenu Sobre Nós">
           <a href="nossa-historia.html">Nossa História</a>
-          <a href="nossa-evolucao.html">Nossa Evolução</a>
           <a href="unidades.html">Unidades</a>
         </div>
       </div>
