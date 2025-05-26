@@ -1,0 +1,400 @@
+:root {
+    --cor-primaria: #098dac;
+    --cor-secundaria: #ec7f18;
+    --cor-hover: #ffd7b2;
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+    --sombra: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: var(--cor-texto);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    height: 70px;
+    margin-right: 80px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover .logo-img {
+    transform: scale(1.05);
+  }
+  
+  nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--cor-secundaria);
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cor-branco);
+    border: 1px solid #ddd;
+    min-width: 240px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    padding-left: 25px;
+  }
+  
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .dropdown > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 6px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown:hover > a::after {
+    transform: rotate(180deg);
+  }
+  
+  .botao-doador {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    border: 2px solid transparent;
+  }
+  
+  .botao-doador:hover {
+    background-color: var(--cor-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .banner {
+    background: linear-gradient(90deg, var(--cor-secundaria), #ff9900);
+    color: var(--cor-branco);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assets/imgs/pattern.png') repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  
+  .banner-conteudo {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .banner-conteudo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .banner-conteudo p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .botao-banner {
+    display: inline-block;
+    background-color: var(--cor-branco);
+    color: var(--cor-secundaria);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-branco);
+  }
+  
+  .botao-banner:hover {
+    background-color: transparent;
+    color: var(--cor-branco);
+  }
+  
+  .destaques {
+    position: relative;
+    background-color: var(--cor-branco);
+    padding: 80px 0;
+  }
+  
+  .destaques .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .section-header {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .section-header h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+  }
+  
+  .divisor {
+    height: 4px;
+    width: 80px;
+    background: #EC7F18;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+  
+  .section-subtitle {
+    margin: 0 auto;
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.8;
+  }
+  
+  .destaques-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .destaque-card {
+    background: var(--cor-branco);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .destaque-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .compromisso-social .card-icon {
+    background: rgba(236, 127, 24, 0.1);
+    color: #EC7F18;
+  }
+  
+  .compromisso-social:hover .card-icon {
+    background: #EC7F18;
+    color: var(--cor-branco);
+  }
+  
+  .trabalho-coletivo .card-icon {
+    background: rgba(9, 141, 172, 0.1);
+    color: #098DAC;
+  }
+  
+  .trabalho-coletivo:hover .card-icon {
+    background: #098DAC;
+    color: var(--cor-branco);
+  }
+  
+  .sustentabilidade .card-icon {
+    background: rgba(4, 194, 96, 0.1);
+    color: #04C260;
+  }
+  
+  .sustentabilidade:hover .card-icon {
+    background: #04C260;
+    color: var(--cor-branco);
+  }
+  
+  .card-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    display: flex;
+    margin: 0 auto 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .destaque-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+  }
+  
+  .destaque-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+    color: var(--cor-texto);
+  }
+  
+  @media (max-width: 992px) {
+    header {
+      padding: 15px 20px;
+    }
+    nav {
+      gap: 15px;
+    }
+    .logo {
+      margin-right: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px;
+    }
+    nav {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+    .dropdown {
+      width: 100%;
+    }
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      border: none;
+      width: 100%;
+      display: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .logo {
+      margin-right: 0;
+      height: 50px;
+    }
+    .banner-conteudo h1 {
+      font-size: 1.8rem;
+    }
+    .banner-conteudo p {
+      font-size: 1rem;
+    }
+    .destaques {
+      padding: 60px 0;
+    }
+    .destaques-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .destaque-card {
+      padding: 30px 20px;
+    }
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner {
+      padding: 60px 15px;
+    }
+    .banner-conteudo h1 {
+      font-size: 1.5rem;
+    }
+    .botao-doador, .botao-banner {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
