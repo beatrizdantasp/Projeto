@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça uma doação - ONG BLV</title>
+    <link rel="stylesheet" href="projetos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="donation-container">
+        <div class="donation-header">
+            <h2>Faça uma Doação</h2>
+            <p>Sua contribuição ajuda a fazer a diferença. Qualquer valor é bem-vindo!</p>
+        </div> 
+          <form action="obrigado.html" method="get">
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" placeholder="Nome Completo" required>
+            </div>   
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="nome@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>Valor da Doação:</label>
+                <div class="donation-amount">
+                    <div class="amount-option">
+                        <input type="radio" id="amount-50" name="amount" value="50">  
+            <label for="amount-50">R$ 50</label>
+                    </div>
+                    <div class="amount-option">
+                        <input type="radio" id="amount-100" name="amount" value="100">
+                        <label for="amount-100">R$ 100</label>
+                    </div>
+                    <div class="amount-option">
+                        <input type="radio" id="amount-200" name="amount" value="200">
+                        <label for="amount-200">R$ 200</label>
+                    </div>
+                    <div class="amount-option">
+                        <input type="radio" id="amount-500" name="amount" value="500">
+                        <label for="amount-500">R$ 500</label>
+                    </div>
+                </div>
+                
+                <div class="custom-amount">
+                    <label for="custom-amount">Ou informe outro valor:</label>
+                    <input type="number" id="custom-amount" name="custom-amount" min="1" placeholder="R$ 0,00">
+                </div>
+            </div>
+            
+            <div class="form-group payment-method">
+                <label for="payment-method">Método de Pagamento:</label>
+                <select id="payment-method" name="payment-method" style="padding: 12px" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="credit-card">Cartão de Crédito</option>
+                    <option value="debit-card">Cartão de Débito</option>
+                    <option value="pix">PIX</option>
+                    <option value="bank-transfer">Transferência Bancária</option>
+                </select>
+                <div class="payment-icons">
+                    <img src="assets/imgs/visa.png" alt="Visa">
+                    <img src="assets/imgs/mastercard.png" alt="Mastercard">
+                    <img src="assets/imgs/pix.png" alt="PIX" style="height: 30px; object-fit: contain;">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Mensagem (opcional):</label>
+                <textarea id="message" name="message" rows="3" style="width: 100%; padding: 12px 1px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Realizar Doação</button>
+        </form>
+    </div>
+</body>
+</html>

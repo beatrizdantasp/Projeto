@@ -1,0 +1,178 @@
+:root {
+    --cor-primaria: #098DAC; /* azul */
+    --cor-secundaria: #EC7F18; /* laranja */
+    --cor-terciaria: #04C260; /* verde */
+    --cor-branco: #fff;
+    --cor-texto: #333;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos {
+    background: linear-gradient(135deg, var(--cor-branco), #f9f9f9);
+    padding: 80px 20px;
+    color: var(--cor-texto);
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre-nos::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(4, 194, 96, 0.1); /* verde suave */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.sobre-nos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-nos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--cor-primaria); /* azul */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sobre-nos h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cor-secundaria); /* laranja */
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.sobre-nos h2:hover::after {
+    width: 80px;
+    background: var(--cor-terciaria); /* verde */
+}
+
+.divisor {
+    height: 4px;
+    width: 80px;
+    background: var(--cor-secundaria); /* laranja */
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.sobre-nos p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--cor-primaria); /* azul */
+    opacity: 0.9;
+}
+.imagem-destaque {
+    width: 400px; 
+    height: 250px; 
+    object-fit: cover;
+    display: block;           /* Faz a imagem se comportar como bloco */
+    margin: 0 auto;          /* Centraliza horizontalmente */
+    border-radius: 10px;     /* Opcional: bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: sombra suave */
+}
+
+.legenda-imagem {
+    font-size: 0.9rem; 
+    color: #555; 
+    font-style: italic;
+    opacity: 0.8;
+    text-align: center; /* Centraliza a legenda */
+    margin-top: 5px;
+}
+
+.nossa-meta {
+    background: linear-gradient(135deg, rgba(236, 127, 24, 0.1), rgba(9, 141, 172, 0.1)); /* laranja e azul suaves */
+    padding: 80px 20px;
+    position: relative;
+}
+
+.nossa-meta .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nossa-meta h2 {
+    font-size: 2.2rem;
+    color: var(--cor-secundaria); /* laranja */
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.nossa-meta h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cor-primaria); /* azul */
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.nossa-meta h2:hover::after {
+    width: 80px;
+    background: var(--cor-terciaria); /* verde */
+}
+
+.nossa-meta blockquote {
+    background: linear-gradient(135deg, var(--cor-branco), #f9f9f9);
+    padding: 50px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    color: var(--cor-secundaria); /* laranja */
+    box-shadow: var(--sombra);
+    border-radius: 15px;
+    text-align: center;
+    border-left: 6px solid var(--cor-primaria); /* azul */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nossa-meta blockquote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nossa-meta blockquote::before {
+    content: "“";
+    font-size: 5rem;
+    color: var(--cor-terciaria); /* verde */
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-family: serif;
+    opacity: 0.2;
+}
+
+.nossa-meta .lema {
+    display: block;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--cor-primaria); /* azul */
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.nossa-meta .lema:hover {
+    color: var(--cor-secundaria); /* laranja */
+}

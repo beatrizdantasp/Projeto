@@ -1,46 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONG BLV - Boulevard Social</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organização transformando vidas através da educação, esporte, cultura e arte">
+  <title>Transformando Vidas | Organização Social</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sobre-nos.css">
+  <link rel="stylesheet" href="projeto.css">
+  <link rel="stylesheet" href="footer.css">
 </head>
+
 <body>
+
   <header>
-    <div class="logo">Logotipo ONG BLV</div>
-    <nav>
-      <a href="#projetos">Projetos</a>
-      <a href="#sobre-nos">Sobre Nós</a>
-      <a href="#parceiro">Seja Parceiro</a>
+    <a href="index.html" class="logo">
+      <img src="assets/imgs/imagem.png" class="logo-img" alt="Logo da Organização">
+    </a>
+
+    <nav id="main-nav">
+      <div class="dropdown">
+        <a aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
+        <div class="dropdown-content" aria-label="Submenu Sobre Nós">
+          <a href="nossa-historia.html">Nossa História</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a aria-haspopup="true" aria-expanded="false">Fale Conosco</a>
+        <div class="dropdown-content" aria-label="Submenu Fale Conosco">
+          <a href="https://wa.me/5583991610237" target="_blank">Nosso WhatsApp</a>
+          <a href="contato.html">Formulário de Contato</a>
+        </div>
+      </div>
+
+      <a href="doacao.html" class="botao-doador">Seja um Doador</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>ONG BLV - Boulevard Social</h1>
-    <p>Transformando vidas por meio da educação, cultura, esporte e solidariedade.</p>
-  </section>
-
-  <section class="valores">
-    <div>
-      <h3>Educação</h3>
-      <p>Capacitação e qualificação para o futuro.</p>
-    </div>
-    <div>
-      <h3>Esporte</h3>
-      <p>Transformação e inclusão através do esporte.</p>
-    </div>
-    <div>
-      <h3>Solidariedade</h3>
-      <p>Ajuda mútua e amor ao próximo como base da nossa ação.</p>
+  <section class="banner" aria-labelledby="banner-heading">
+    <div class="banner-conteudo">
+      <h1 id="banner-heading">Transformando vidas através da educação, esporte, cultura e arte</h1>
+      <p>Junte-se a nós nessa missão de impacto social!</p>
     </div>
   </section>
 
-  <section id="projetos" class="projetos">
+  <section class="sobre-nos" id="sobre-nos">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>Em 2009, Mailson Dantas, nosso presidente fundador, e sua esposa, Roqueane Dantas, iniciaram um trabalho de distribuição de alimentos e roupas para moradores em situação de rua.</p>
+      <p>Diante do impacto positivo dessas ações, tornou-se evidente a necessidade de um espaço fixo para ampliar o trabalho. Dessa forma, de maneira generosa, os fundadores decidiram ceder o seu único imóvel para implantar a sede da ONG, passando então a morar de aluguel.</p>
+      <p>Atualmente, após quase dezesseis anos de dedicação, o que começou como um pequeno gesto de solidariedade transformou-se em referência em acolhimento social. A Boulevard já impacta direta e indiretamente mais de duas mil famílias.</p>
+    </div>
+
+    <div class="hero-imagem">
+      <img src="assets/imgs/historia.jpg" alt="Fundadores da ONG Boulevard" class="imagem-destaque" loading="lazy">
+      <div class="legenda-imagem">Mailson e Roqueane Dantas, fundadores da ONG Boulevard</div>
+    </div>
+  </section>
+
+  <section class="nossa-meta">
+    <div class="container">
+      <h2>Nossa Meta</h2>
+      <blockquote>
+        <p>Resgatar a dignidade das crianças, adolescentes, jovens e dos adultos, promovendo a transformação através do esporte, cultura e lazer.</p>
+        <footer><cite class="lema">"Abrindo caminhos para o futuro."</cite></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="destaques">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossos Princípios</h2>
+        <div class="divisor"></div>
+        <p class="section-subtitle">Os valores que guiam nosso trabalho diário</p>
+      </div>
+
+      <div class="destaques-grid">
+        <div class="destaque-card compromisso-social">
+          <div class="card-icon"><i class="fas fa-heart"></i></div>
+          <h3>Compromisso Social</h3>
+          <p>Acreditamos no poder transformador da educação e do acolhimento para construir uma sociedade mais justa e igualitária.</p>
+        </div>
+
+        <div class="destaque-card trabalho-coletivo">
+          <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+          <h3>Trabalho Coletivo</h3>
+          <p>Valorizamos a colaboração entre educadores, alunos, famílias e comunidade para alcançar resultados transformadores.</p>
+        </div>
+
+        <div class="destaque-card sustentabilidade">
+          <div class="card-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Sustentabilidade</h3>
+          <p>Desenvolvemos projetos ambientalmente responsáveis e financeiramente sustentáveis para um impacto duradouro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos" id="projetos">
     <h2>Conheça nossos projetos</h2>
 
     <div class="bloco">
-      <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/mundo-azul.jpeg" alt="Projeto Meu Mundo Azul" />
+      <img src="assets/imgs/mundo-azul.jpg" alt="Projeto Meu Mundo Azul">
       <div>
         <h3>Meu Mundo Azul</h3>
         <p>Projeto voltado para crianças com TEA (Transtorno do espectro autista). Fornecendo atendimento gratuito com psicólogo, fisioterapeuta, enfermeiro, fonoaudiólogo, psicopedagogo, educador físico e social.</p>
@@ -48,7 +119,15 @@
     </div>
 
     <div class="bloco">
-      <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/cursos.jpeg" alt="Projeto Cursos" />
+      <img src="assets/imgs/alimentos.jpg" alt="Projeto Doação de Alimentos">
+      <div>
+        <h3>Doação de Alimentos</h3>
+        <p>Nosso projeto tem como objetivo combater a fome e promover a dignidade em comunidades em situação de vulnerabilidade. A iniciativa distribui cestas básicas e alimentos frescos para famílias carentes.</p>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <img src="assets/imgs/cursos.jpg" alt="Projeto Cursos">
       <div>
         <h3>Cursos Profissionalizantes</h3>
         <p>Oferecemos cursos gratuitos para qualificação profissional em diversas áreas, como: Primeiros Socorros, Recursos Humanos, Operador de Caixa, Atendente de Farmácia, Cuidador de Idosos, Porteiro, Secretariado e Fiscal de Loja.</p>
@@ -56,64 +135,50 @@
     </div>
 
     <div class="bloco">
-      <img src="https://raw.githubusercontent.com/beatrizdantasp/Projeto/pedro/feliz-idade.jpeg" alt="Projeto Feliz Idade" />
+      <img src="assets/imgs/esportes.jpg" alt="Projeto Esportes">
       <div>
-        <h3>Feliz Idade</h3>
-        <p>O projeto Feliz Idade oferece apoio, passeios e hidroginástica para idosos, promovendo saúde, diversão e socialização.</p>
+        <h3>Esportes e Dança</h3>
+        <p>Acreditamos que o esporte é uma poderosa ferramenta de transformação social. Por isso, oferecemos aulas gratuitas de ballet, judô, futsal, vôlei, basquete, ginástica rítmica, jazz e entre muitos outros para crianças e jovens de comunidades carentes.</p>
       </div>
     </div>
 
     <div class="bloco">
-      <h3>Doação de Alimentos</h3>
-      <p>Nosso projeto combate a fome e promove dignidade com a distribuição de cestas básicas e alimentos frescos a famílias carentes.</p>
-    </div>
-
-    <div class="bloco">
-      <h3>Esportes e Dança</h3>
-      <p>Oferecemos aulas gratuitas de ballet, judô, futsal, vôlei, basquete, ginástica rítmica, jazz e outros para crianças e jovens de comunidades carentes.</p>
+      <img src="assets/imgs/feliz-idade.jpg" alt="Projeto Feliz Idade">
+      <div>
+        <h3>Feliz Idade</h3>
+        <p>O projeto Feliz Idade oferece apoio, passeios e hidroginástica para idosos, promovendo saúde, diversão e socialização. Uma iniciativa para viver a melhor idade com alegria e qualidade de vida!</p>
+      </div>
     </div>
 
     <div class="cta">
-      <a href="#parceiro" class="botao">Quero ser um parceiro</a>
+      <a href="parceiro.html" class="botao">Quero ser um parceiro</a>
     </div>
-  </section>
-
-  <section id="sobre-nos">
-    <h2>Sobre Nós</h2>
-    <p>Em 2009, Mailson Dantas e sua esposa iniciaram ações sociais com distribuição de alimentos. Hoje, a ONG BLV impacta mais de duas mil famílias com iniciativas voltadas ao acolhimento e transformação social.</p>
-  </section>
-
-  <section class="meta">
-    <h2>Nossa Meta</h2>
-    <p>Resgatar a dignidade das crianças, adolescentes, jovens e dos adultos, promovendo a transformação através do esporte, cultura e lazer.</p>
-    <em>“Abrindo caminhos para o futuro.”</em>
-  </section>
-
-  <section id="parceiro" class="parceiro">
-    <h2>Seja nosso parceiro!</h2>
-    <p>Quer fazer parte dessa transformação? Preencha o formulário abaixo para se tornar um parceiro da ONG BLV.</p>
-    <form>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu e-mail" required />
-      <textarea placeholder="Como você gostaria de ajudar?" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
   </section>
 
   <footer>
-    <div class="logo">Logo BLV Social</div>
-    <div class="footer-links">
-      <a href="#projetos">Nossos Projetos</a>
-      <a href="#sobre-nos">Sobre Nós</a>
-      <a href="#parceiro">Seja um Parceiro</a>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/imgs/imagem.png" alt="Logo da ONG">
+      </div>
+
+      <div class="footer-links" style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="#projetos">Nossos Projetos</a>
+        <a href="#sobre-nos">Sobre Nós</a>
+        <a href="#parceiro">Seja um Parceiro</a>
+      </div>
+
+      <div class="footer-contacts">
+        <h4>Contato</h4>
+        <a href="mailto:mdtsocial@gmail.com">Email: mdtsocial@gmail.com</a><br>
+        <a href="tel:+5583991610237">Telefone: (83) 99161-0237</a><br>
+        <a href="https://www.instagram.com/ongblv" target="_blank">Instagram: @ongblv</a>
+      </div>
     </div>
-    <div class="footer-contatos">
-      <h4>Contato</h4>
-      <p><a href="mailto:mdtsocial@gmail.com">Email: mdtsocial@gmail.com</a></p>
-      <p><a href="tel:+5583991610237">Telefone: (83) 99161-0237</a></p>
-      <p><a href="https://www.instagram.com/ongblv" target="_blank">Instagram: @ongblv</a></p>
+
+    <div style="text-align: center; padding-top: 20px; font-size: 14px; color: #555;">
+      <h5>&copy; 2025 ONG BLV - Todos os direitos reservados.</h5>
     </div>
-    <p>© 2025 ONG BLV - Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
